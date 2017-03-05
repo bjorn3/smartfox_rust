@@ -31,8 +31,8 @@ impl ::std::str::FromStr for Packet {
 
         if let Some(captures) = PACKET_REGEX.captures(&data) {
             let name = captures.get(1).unwrap().as_str();
-            let data = captures.get(2).unwrap().as_str().trim_right_matches('%');
-            assert!(captures.get(3).is_none());
+            let data = captures.get(3).unwrap().as_str().trim_right_matches('%');
+            assert!(captures.get(4).is_none());
             Ok(Packet {
                 name: name.to_string(),
                 room: "".to_string(),
