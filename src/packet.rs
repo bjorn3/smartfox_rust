@@ -18,7 +18,7 @@ impl ::std::str::FromStr for Packet {
 
         lazy_static! {
             static ref PACKET_REGEX: Regex =
-                Regex::new(r"^%xt%([[:word:]]+)%1%(0%)?(.*)$").expect("Invalid packet regex");
+                Regex::new(r"^%xt%([[:word:]]+)%1%(0%)?([^0].*)$").expect("Invalid packet regex");
         }
 
         if data.is_empty() {
