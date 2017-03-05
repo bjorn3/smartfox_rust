@@ -6,9 +6,9 @@ use std::fmt;
 /// A server returned packet of data.
 #[derive(Clone, PartialEq)]
 pub struct Packet {
-    name: String,
-    room: String,
-    data: String,
+    pub name: String,
+    pub room: String,
+    pub data: String,
 }
 
 impl ::std::str::FromStr for Packet {
